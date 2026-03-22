@@ -1,28 +1,39 @@
 import { motion } from "framer-motion";
 import { ExternalLink, Github, Star, Smartphone } from "lucide-react";
 
-const featuredProject = {
-  title: "Zofeur Customer App",
-  subtitle: "Ride-Hailing Platform · UAE",
-  description:
-    "A high-performance ride-hailing platform serving 100K+ users across the UAE. Contributed to end-to-end development — from feature implementation to crash monitoring and performance optimization.",
-  impact: [
-    "Integrated Adyen & Checkout payment flows for seamless transactions",
-    "Built real-time Firebase notifications & live data updates across screens",
-    "Improved app stability through crash monitoring & performance tuning",
-  ],
-  tech: ["Kotlin", "MVVM", "Firebase", "Adyen", "Checkout", "Google Maps", "ZCA"],
-  link: "https://play.google.com/store/apps/details?id=com.app.zofeur",
-};
-
-const otherProjects = [
+const featuredProjects = [
+  {
+    title: "Zofeur Customer App",
+    subtitle: "Ride-Hailing Platform · UAE",
+    description:
+      "A high-performance ride-hailing platform serving 100K+ users across the UAE. Contributed to end-to-end development — from feature implementation to crash monitoring and performance optimization.",
+    impact: [
+      "Integrated Adyen & Checkout payment flows for seamless transactions",
+      "Built real-time Firebase notifications & live data updates across screens",
+      "Improved app stability through crash monitoring & performance tuning",
+    ],
+    tech: ["Kotlin", "MVVM", "Firebase", "Adyen", "Checkout", "Google Maps", "ZCA"],
+    link: "https://play.google.com/store/apps/details?id=com.app.zofeur",
+    abbr: "ZCA",
+    users: "100K+ Users",
+  },
   {
     title: "LadyBird Parent App",
     subtitle: "School Transport Tracking",
     description:
       "Real-time school transport tracking app for parents with push notifications. Built on Clean Architecture with Stripe payment integration — designed for scalability and maintainability.",
+    impact: [
+      "Built real-time vehicle tracking with Google Maps integration",
+      "Integrated Stripe payment flows for subscription management",
+      "Architected with Clean Architecture for long-term scalability",
+    ],
     tech: ["Kotlin", "Clean Architecture", "Firebase", "Google Maps", "Stripe"],
+    abbr: "LPA",
+    users: "Parents & Schools",
   },
+];
+
+const otherProjects = [
   {
     title: "EAttendance",
     subtitle: "GPS-Based Attendance",
@@ -64,78 +75,78 @@ const ProjectsSection = () => {
             <span className="h-px flex-1 bg-border max-w-xs" />
           </h2>
 
-          {/* Featured Project — Full Width Hero Card */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="relative mb-20 rounded-xl border border-primary/20 bg-card overflow-hidden"
-          >
-            {/* Featured badge */}
-            <div className="absolute top-0 right-0 bg-primary/10 border-l border-b border-primary/20 px-4 py-1.5 rounded-bl-lg">
-              <span className="flex items-center gap-1.5 text-xs font-mono text-primary">
-                <Star size={12} className="fill-primary" /> Featured Project
-              </span>
-            </div>
-
-            <div className="grid md:grid-cols-5 gap-0">
-              {/* Visual Panel */}
-              <div className="md:col-span-2 bg-secondary/30 border-r border-border flex flex-col items-center justify-center p-10 min-h-[280px]">
-                <div className="w-20 h-20 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-4">
-                  <Smartphone className="text-primary" size={36} />
+          {/* Featured Projects */}
+          <div className="space-y-10 mb-20">
+            {featuredProjects.map((project, idx) => (
+              <motion.div
+                key={project.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.15, duration: 0.6 }}
+                className="relative rounded-xl border border-primary/20 bg-card overflow-hidden"
+              >
+                <div className="absolute top-0 right-0 bg-primary/10 border-l border-b border-primary/20 px-4 py-1.5 rounded-bl-lg">
+                  <span className="flex items-center gap-1.5 text-xs font-mono text-primary">
+                    <Star size={12} className="fill-primary" /> Featured Project
+                  </span>
                 </div>
-                <span className="font-mono text-2xl font-bold text-gradient-primary tracking-tight">
-                  ZCA
-                </span>
-                <span className="text-xs text-muted-foreground font-mono mt-2">100K+ Users</span>
-              </div>
 
-              {/* Content Panel */}
-              <div className="md:col-span-3 p-8 md:p-10">
-                <div className="mb-1">
-                  <span className="text-xs font-mono text-muted-foreground">{featuredProject.subtitle}</span>
-                </div>
-                <h3 className="text-2xl md:text-3xl font-bold mb-4">{featuredProject.title}</h3>
-                <p className="text-muted-foreground leading-relaxed mb-6 text-sm md:text-base">
-                  {featuredProject.description}
-                </p>
-
-                {/* Impact bullets */}
-                <ul className="space-y-2.5 mb-8">
-                  {featuredProject.impact.map((item) => (
-                    <li key={item} className="flex items-start gap-2.5 text-sm">
-                      <span className="text-primary mt-1 flex-shrink-0">▹</span>
-                      <span className="text-muted-foreground">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                {/* Tech */}
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {featuredProject.tech.map((t) => (
-                    <span
-                      key={t}
-                      className="px-3 py-1 text-xs font-mono rounded-full bg-primary/10 text-primary border border-primary/20"
-                    >
-                      {t}
+                <div className="grid md:grid-cols-5 gap-0">
+                  <div className="md:col-span-2 bg-secondary/30 border-r border-border flex flex-col items-center justify-center p-10 min-h-[280px]">
+                    <div className="w-20 h-20 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-4">
+                      <Smartphone className="text-primary" size={36} />
+                    </div>
+                    <span className="font-mono text-2xl font-bold text-gradient-primary tracking-tight">
+                      {project.abbr}
                     </span>
-                  ))}
-                </div>
+                    <span className="text-xs text-muted-foreground font-mono mt-2">{project.users}</span>
+                  </div>
 
-                {featuredProject.link && (
-                  <a
-                    href={featuredProject.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-mono text-primary hover:underline"
-                  >
-                    View on Play Store <ExternalLink size={14} />
-                  </a>
-                )}
-              </div>
-            </div>
-          </motion.div>
+                  <div className="md:col-span-3 p-8 md:p-10">
+                    <div className="mb-1">
+                      <span className="text-xs font-mono text-muted-foreground">{project.subtitle}</span>
+                    </div>
+                    <h3 className="text-2xl md:text-3xl font-bold mb-4">{project.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed mb-6 text-sm md:text-base">
+                      {project.description}
+                    </p>
+
+                    <ul className="space-y-2.5 mb-8">
+                      {project.impact.map((item) => (
+                        <li key={item} className="flex items-start gap-2.5 text-sm">
+                          <span className="text-primary mt-1 flex-shrink-0">▹</span>
+                          <span className="text-muted-foreground">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      {project.tech.map((t) => (
+                        <span
+                          key={t}
+                          className="px-3 py-1 text-xs font-mono rounded-full bg-primary/10 text-primary border border-primary/20"
+                        >
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+
+                    {project.link && (
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-sm font-mono text-primary hover:underline"
+                      >
+                        View on Play Store <ExternalLink size={14} />
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
 
           {/* Other Projects */}
           <h3 className="text-center font-mono text-lg mb-10 text-muted-foreground">
