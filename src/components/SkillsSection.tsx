@@ -14,8 +14,20 @@ const skillCategories = [
     skills: ["Jetpack Compose", "LiveData", "Navigation", "Flows", "Work Manager", "Coroutines"],
   },
   {
+    title: "Networking & Data",
+    skills: ["Retrofit", "OkHttp", "REST APIs", "JSON (Moshi/Gson)", "Room Database", "DataStore/SharedPreferences"],
+  },
+  {
     title: "Tools & Services",
-    skills: ["Firebase", "Google Maps SDK", "Stripe", "CleverTap", "Adjust", "GitLab CI/CD", "Jira"],
+    skills: ["Firebase (Crashlytics, Analytics)", "Google Maps SDK", "Stripe", "CleverTap", "Adjust", "Git", "GitLab CI/CD", "Jira"],
+  },
+  {
+    title: "App Deployment & Release",
+    skills: ["Google Play Console", "App Publishing", "Internal Testing", "Closed/Beta Testing", "Production Releases", "App Signing"],
+  },
+  {
+    title: "AI & Modern Development",
+    skills: ["ChatGPT", "GitHub Copilot", "Generative AI"],
   },
 ];
 
