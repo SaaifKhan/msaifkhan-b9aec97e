@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, FileText, ArrowDown } from "lucide-react";
+import profileImg from "@/assets/saif-profile.png";
 
 const socials = [
   { icon: Github, href: "https://github.com/SaaifKhan", label: "GitHub" },
