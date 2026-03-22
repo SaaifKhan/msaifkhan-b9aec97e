@@ -1,28 +1,39 @@
 import { motion } from "framer-motion";
 import { ExternalLink, Github, Star, Smartphone } from "lucide-react";
 
-const featuredProject = {
-  title: "Zofeur Customer App",
-  subtitle: "Ride-Hailing Platform · UAE",
-  description:
-    "A high-performance ride-hailing platform serving 100K+ users across the UAE. Contributed to end-to-end development — from feature implementation to crash monitoring and performance optimization.",
-  impact: [
-    "Integrated Adyen & Checkout payment flows for seamless transactions",
-    "Built real-time Firebase notifications & live data updates across screens",
-    "Improved app stability through crash monitoring & performance tuning",
-  ],
-  tech: ["Kotlin", "MVVM", "Firebase", "Adyen", "Checkout", "Google Maps", "ZCA"],
-  link: "https://play.google.com/store/apps/details?id=com.app.zofeur",
-};
-
-const otherProjects = [
+const featuredProjects = [
+  {
+    title: "Zofeur Customer App",
+    subtitle: "Ride-Hailing Platform · UAE",
+    description:
+      "A high-performance ride-hailing platform serving 100K+ users across the UAE. Contributed to end-to-end development — from feature implementation to crash monitoring and performance optimization.",
+    impact: [
+      "Integrated Adyen & Checkout payment flows for seamless transactions",
+      "Built real-time Firebase notifications & live data updates across screens",
+      "Improved app stability through crash monitoring & performance tuning",
+    ],
+    tech: ["Kotlin", "MVVM", "Firebase", "Adyen", "Checkout", "Google Maps", "ZCA"],
+    link: "https://play.google.com/store/apps/details?id=com.app.zofeur",
+    abbr: "ZCA",
+    users: "100K+ Users",
+  },
   {
     title: "LadyBird Parent App",
     subtitle: "School Transport Tracking",
     description:
       "Real-time school transport tracking app for parents with push notifications. Built on Clean Architecture with Stripe payment integration — designed for scalability and maintainability.",
+    impact: [
+      "Built real-time vehicle tracking with Google Maps integration",
+      "Integrated Stripe payment flows for subscription management",
+      "Architected with Clean Architecture for long-term scalability",
+    ],
     tech: ["Kotlin", "Clean Architecture", "Firebase", "Google Maps", "Stripe"],
+    abbr: "LPA",
+    users: "Parents & Schools",
   },
+];
+
+const otherProjects = [
   {
     title: "EAttendance",
     subtitle: "GPS-Based Attendance",
