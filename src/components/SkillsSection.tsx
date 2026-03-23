@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const skillCategories = [
   {
     title: "Languages & Frameworks",
-    skills: ["Kotlin", "Java", "Dart", "XML", "Flutter"],
+    skills: ["Kotlin", "Java", "Dart", "Flutter", "XML", ".NET", "Python"],
   },
   {
     title: "Architecture & Patterns",
@@ -26,8 +26,8 @@ const skillCategories = [
     skills: ["Google Play Console", "App Publishing", "Internal Testing", "Closed/Beta Testing", "Production Releases", "App Signing"],
   },
   {
-    title: "AI & Modern Development",
-    skills: ["ChatGPT", "GitHub Copilot", "Generative AI"],
+    title: "AI & Data Science",
+    skills: ["ChatGPT", "GitHub Copilot", "Generative AI", "Python Data Science", "Prompt Engineering"],
   },
 ];
 

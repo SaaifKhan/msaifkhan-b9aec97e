@@ -40,7 +40,6 @@ const otherProjects = [
     description:
       "Real-time GPS-based attendance management with punch in/out, break tracking, and monthly history reports.",
     tech: ["Kotlin", "MVVM", "GPS", "Work Manager"],
-    link: "#",
   },
   {
     title: "Bx Loyalty App",
@@ -48,7 +47,6 @@ const otherProjects = [
     description:
       "Loyalty app with barcode scanning for clients to track earned points and redeem discounts effortlessly.",
     tech: ["Kotlin", "Clean Architecture", "Barcode SDK"],
-    link: "#",
   },
   {
     title: "Blood Donor Finder",
@@ -173,11 +171,6 @@ const ProjectsSection = () => {
                     {project.github && (
                       <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                         <Github size={18} />
-                      </a>
-                    )}
-                    {project.link && (
-                      <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                        <ExternalLink size={18} />
                       </a>
                     )}
                   </div>
