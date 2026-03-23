@@ -24,9 +24,10 @@ const AboutSection = () => {
                 Android ecosystem.
               </p>
               <p>
-                I specialize in building production-grade apps using <span className="text-primary">Kotlin</span>, 
+                I specialize in building production-grade mobile apps using <span className="text-primary">Kotlin</span>, 
                 <span className="text-primary"> Jetpack Compose</span>, <span className="text-primary">MVVM</span>, 
-                and <span className="text-primary">Clean Architecture</span>. I've worked with 
+                <span className="text-primary">Clean Architecture</span>, and cross-platform solutions with 
+                <span className="text-primary">Flutter</span> & <span className="text-primary">Dart</span>. I've worked with 
                 companies to deliver apps that handle payments, real-time chat, location 
                 services, and complex UI systems.
               </p>
