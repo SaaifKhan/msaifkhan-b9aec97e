@@ -173,11 +173,6 @@ const ProjectsSection = () => {
                         <Github size={18} />
                       </a>
                     )}
-                    {project.link && (
-                      <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
-                        <ExternalLink size={18} />
-                      </a>
-                    )}
                   </div>
                 </div>
                 <p className="text-sm text-muted-foreground mb-5 leading-relaxed">
