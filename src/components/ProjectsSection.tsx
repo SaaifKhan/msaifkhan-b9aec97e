@@ -40,18 +40,27 @@ const featuredProjects = [
 
 const otherProjects = [
   {
-    title: "Kingsway",
-    subtitle: "Mobile App",
+    title: "Rapid Order",
+    subtitle: "Restaurant Supply Chain",
     description:
-      "A published Android application available on the Google Play Store.",
-    tech: ["Kotlin", "Android SDK"],
+      "A restaurant supply chain app with complete order functionality, supplier management, and real-time chat built with custom Canvas UI and MVVM architecture.",
+    tech: ["Kotlin", "MVVM", "Canvas", "Firebase"],
+    image: rapidImage,
+  },
+  {
+    title: "Kingsway",
+    subtitle: "E-Commerce Flutter App",
+    description:
+      "A Flutter-based e-commerce app built with MVVM architecture. Designed the UI independently, creating a user-friendly and visually consistent interface from scratch.",
+    tech: ["Flutter", "Dart", "MVVM"],
     link: "https://play.google.com/store/apps/details?id=com.technosys.kingsway",
+    image: kingswayImage,
   },
   {
     title: "EAttendance",
     subtitle: "GPS-Based Attendance",
     description:
-      "Real-time GPS-based attendance management with punch in/out, break tracking, and monthly history reports.",
+      "Automated employee attendance system that captures user's current location and marks attendance only within the approved geofence radius.",
     tech: ["Kotlin", "MVVM", "GPS", "Work Manager"],
   },
   {
