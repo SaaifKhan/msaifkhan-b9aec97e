@@ -12,28 +12,37 @@ const featuredProjects = [
       "Built real-time Firebase notifications & live data updates across screens",
       "Improved app stability through crash monitoring & performance tuning",
     ],
-    tech: ["Kotlin", "MVVM", "Firebase", "Adyen", "Checkout", "Google Maps", "ZCA"],
-    link: "https://play.google.com/store/apps/details?id=com.app.zofeur",
+    tech: ["Kotlin", "MVVM", "Firebase", "Adyen", "Checkout", "Google Maps"],
+    link: "https://play.google.com/store/apps/details?id=production.zofeur.customer&hl=en",
     abbr: "ZCA",
     users: "100K+ Users",
   },
   {
     title: "LadyBird Parent App",
-    subtitle: "School Transport Tracking",
+    subtitle: "Childcare Management Platform",
     description:
-      "Real-time school transport tracking app for parents with push notifications. Built on Clean Architecture with Stripe payment integration — designed for scalability and maintainability.",
+      "Perfect Day is the only true all-in-one childcare management software on the market. It provides real-time live HD video monitoring and a social media style daily activity feed so parents can see what their child is up to at any time throughout the day.",
     impact: [
-      "Built real-time vehicle tracking with Google Maps integration",
-      "Integrated Stripe payment flows for subscription management",
-      "Architected with Clean Architecture for long-term scalability",
+      "Integrated Stripe payments & built the subscription module end-to-end",
+      "Fixed memory leaks & resolved production bugs for app stability",
+      "Delivered production-readiness improvements across the platform",
     ],
-    tech: ["Kotlin", "Clean Architecture", "Firebase", "Google Maps", "Stripe"],
+    tech: ["Kotlin", "Clean Architecture", "Firebase", "Stripe"],
+    link: "https://play.google.com/store/apps/details?id=com.perfectday.parent",
     abbr: "LPA",
-    users: "Parents & Schools",
+    users: "Parents & Childcare",
   },
 ];
 
 const otherProjects = [
+  {
+    title: "Kingsway",
+    subtitle: "Mobile App",
+    description:
+      "A published Android application available on the Google Play Store.",
+    tech: ["Kotlin", "Android SDK"],
+    link: "https://play.google.com/store/apps/details?id=com.technosys.kingsway",
+  },
   {
     title: "EAttendance",
     subtitle: "GPS-Based Attendance",
