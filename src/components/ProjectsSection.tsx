@@ -113,14 +113,12 @@ const ProjectsSection = () => {
                 </div>
 
                 <div className="grid md:grid-cols-5 gap-0">
-                  <div className="md:col-span-2 bg-secondary/30 border-r border-border flex flex-col items-center justify-center p-10 min-h-[280px]">
-                    <div className="w-20 h-20 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-4">
-                      <Smartphone className="text-primary" size={36} />
-                    </div>
-                    <span className="font-mono text-2xl font-bold text-gradient-primary tracking-tight">
-                      {project.abbr}
-                    </span>
-                    <span className="text-xs text-muted-foreground font-mono mt-2">{project.users}</span>
+                  <div className="md:col-span-2 bg-secondary/30 border-r border-border flex items-center justify-center p-4 min-h-[280px] overflow-hidden">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover rounded-lg"
+                    />
                   </div>
 
                   <div className="md:col-span-3 p-8 md:p-10">
