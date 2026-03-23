@@ -14,11 +14,11 @@ const featuredProjects = [
     impact: [
       "Integrated Adyen & Checkout payment flows for seamless transactions",
       "Built real-time Firebase notifications & live data updates across screens",
-      "Improved app stability through crash monitoring & performance tuning",
+      "Improved app stability to 99.72% crash-free through performance optimization",
     ],
     tech: ["Kotlin", "MVVM", "Firebase", "Adyen", "Checkout", "Google Maps"],
     link: "https://play.google.com/store/apps/details?id=production.zofeur.customer&hl=en",
-    abbr: "ZCA",
+    image: zofeurImage,
     users: "100K+ Users",
   },
   {
@@ -33,7 +33,7 @@ const featuredProjects = [
     ],
     tech: ["Kotlin", "Clean Architecture", "Firebase", "Stripe"],
     link: "https://play.google.com/store/apps/details?id=com.perfectday.parent",
-    abbr: "LPA",
+    image: ladybirdImage,
     users: "Parents & Childcare",
   },
 ];
