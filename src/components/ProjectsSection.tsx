@@ -177,6 +177,11 @@ const ProjectsSection = () => {
                     <span className="text-xs font-mono text-muted-foreground">{project.subtitle}</span>
                   </div>
                   <div className="flex gap-3">
+                    {project.link && (
+                      <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                        <ExternalLink size={18} />
+                      </a>
+                    )}
                     {project.github && (
                       <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                         <Github size={18} />
