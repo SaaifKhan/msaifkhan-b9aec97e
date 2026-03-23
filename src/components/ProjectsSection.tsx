@@ -1,5 +1,9 @@
 import { motion } from "framer-motion";
-import { ExternalLink, Github, Star, Smartphone } from "lucide-react";
+import { ExternalLink, Github, Star } from "lucide-react";
+import zofeurImage from "@/assets/zofeur_image.png";
+import ladybirdImage from "@/assets/ladybird.png";
+import kingswayImage from "@/assets/kingsway.png";
+import rapidImage from "@/assets/rapid.png";
 
 const featuredProjects = [
   {
@@ -10,11 +14,11 @@ const featuredProjects = [
     impact: [
       "Integrated Adyen & Checkout payment flows for seamless transactions",
       "Built real-time Firebase notifications & live data updates across screens",
-      "Improved app stability through crash monitoring & performance tuning",
+      "Improved app stability to 99.72% crash-free through performance optimization",
     ],
     tech: ["Kotlin", "MVVM", "Firebase", "Adyen", "Checkout", "Google Maps"],
     link: "https://play.google.com/store/apps/details?id=production.zofeur.customer&hl=en",
-    abbr: "ZCA",
+    image: zofeurImage,
     users: "100K+ Users",
   },
   {
@@ -29,25 +33,34 @@ const featuredProjects = [
     ],
     tech: ["Kotlin", "Clean Architecture", "Firebase", "Stripe"],
     link: "https://play.google.com/store/apps/details?id=com.perfectday.parent",
-    abbr: "LPA",
+    image: ladybirdImage,
     users: "Parents & Childcare",
   },
 ];
 
 const otherProjects = [
   {
-    title: "Kingsway",
-    subtitle: "Mobile App",
+    title: "Rapid Order",
+    subtitle: "Restaurant Supply Chain",
     description:
-      "A published Android application available on the Google Play Store.",
-    tech: ["Kotlin", "Android SDK"],
+      "A restaurant supply chain app with complete order functionality, supplier management, and real-time chat built with custom Canvas UI and MVVM architecture.",
+    tech: ["Kotlin", "MVVM", "Canvas", "Firebase"],
+    image: rapidImage,
+  },
+  {
+    title: "Kingsway",
+    subtitle: "E-Commerce Flutter App",
+    description:
+      "A Flutter-based e-commerce app built with MVVM architecture. Designed the UI independently, creating a user-friendly and visually consistent interface from scratch.",
+    tech: ["Flutter", "Dart", "MVVM"],
     link: "https://play.google.com/store/apps/details?id=com.technosys.kingsway",
+    image: kingswayImage,
   },
   {
     title: "EAttendance",
     subtitle: "GPS-Based Attendance",
     description:
-      "Real-time GPS-based attendance management with punch in/out, break tracking, and monthly history reports.",
+      "Automated employee attendance system that captures user's current location and marks attendance only within the approved geofence radius.",
     tech: ["Kotlin", "MVVM", "GPS", "Work Manager"],
   },
   {
@@ -100,14 +113,12 @@ const ProjectsSection = () => {
                 </div>
 
                 <div className="grid md:grid-cols-5 gap-0">
-                  <div className="md:col-span-2 bg-secondary/30 border-r border-border flex flex-col items-center justify-center p-10 min-h-[280px]">
-                    <div className="w-20 h-20 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-4">
-                      <Smartphone className="text-primary" size={36} />
-                    </div>
-                    <span className="font-mono text-2xl font-bold text-gradient-primary tracking-tight">
-                      {project.abbr}
-                    </span>
-                    <span className="text-xs text-muted-foreground font-mono mt-2">{project.users}</span>
+                  <div className="md:col-span-2 bg-secondary/30 border-r border-border flex items-center justify-center p-4 min-h-[280px] overflow-hidden">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover rounded-lg"
+                    />
                   </div>
 
                   <div className="md:col-span-3 p-8 md:p-10">
@@ -167,8 +178,14 @@ const ProjectsSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1, duration: 0.4 }}
-                className="p-6 rounded-xl bg-card border border-border hover:border-primary/30 hover:-translate-y-1 transition-all group"
+                className="rounded-xl bg-card border border-border hover:border-primary/30 hover:-translate-y-1 transition-all group overflow-hidden"
               >
+                {project.image && (
+                  <div className="w-full h-40 overflow-hidden">
+                    <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
+                  </div>
+                )}
+                <div className="p-6">
                 <div className="flex justify-between items-start mb-3">
                   <div>
                     <h4 className="font-semibold text-lg group-hover:text-primary transition-colors">
@@ -198,6 +215,7 @@ const ProjectsSection = () => {
                       {t}
                     </span>
                   ))}
+                </div>
                 </div>
               </motion.div>
             ))}

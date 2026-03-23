@@ -7,11 +7,13 @@ const experiences = [
     role: "Application Engineer-II",
     period: "Sep 2023 — Present",
     points: [
-      "Contributing to ZOFUER-based product in UAE, a ride-hailing platform",
-      "Built chat systems, location services, and payment gateway integrations",
-      "Implemented Google Maps, Adjust, CleverTap SDKs for analytics and tracking",
-      "Revamping UI using XML and Jetpack Compose while maintaining code integrity",
-      "Leveraged Jetpack components (LiveData, Navigation, Flows) within MVVM architecture",
+      "Worked as an Android Developer on the Zofeur Customer App, a UAE ride-hailing platform",
+      "Built and enhanced core features including chat, maps, payments, and AI integrations (OpenAI, Google Gemini)",
+      "Delivered full payment checkout flows (subscriptions, tips, fares) in 2 weeks",
+      "Revamped UI using XML and Jetpack Compose, helping increase downloads from 60K to 100K+ (~40%)",
+      "Improved app stability to 99.72% crash-free through performance optimization and code cleanup",
+      "Implemented a reusable custom UI package (gradients, shadows, loaders, canvas components) used across the app, boosting development productivity by 40%",
+      "Integrated Google Maps, Adjust, CleverTap SDKs for analytics and tracking",
     ],
   },
   {
@@ -19,10 +21,10 @@ const experiences = [
     role: "Android Developer",
     period: "Dec 2021 — Sep 2023",
     points: [
-      "Developed new features and user interfaces from wireframe models",
-      "Used Kotlin with Clean Architecture, Coroutines, Flows, and multi-module structure",
-      "Built EAttendance app with real-time GPS tracking and attendance management",
-      "Built Bx Loyalty App with barcode scanning and points management",
+      "Developed the Perfect Day Parent App, delivering quality and timely Android solutions",
+      "Built new features and user interfaces from wireframe models to improve user engagement",
+      "Worked on the Rapid Order app, implementing complete order functionality with custom UI using Canvas and MVVM",
+      "Reduced QA-reported bugs from 90% to 40% through cleaner architecture and improved implementation quality",
       "Implemented GitLab CI/CD pipelines for automated builds and testing",
     ],
   },
@@ -31,14 +33,14 @@ const experiences = [
     role: "Mobile Application Developer",
     period: "May 2021 — Dec 2021",
     points: [
-      "Improved and expanded project platforms using XML-based rich UIs",
-      "Utilized Java/Kotlin with MVVM architecture, LiveData, and Coroutines",
-      "Played a major role in layout modifications to improve functionality",
-      "Developed cross-platform features using Flutter and Dart",
+      "Built the Kingsway Flutter app using MVVM architecture, ensuring clean code structure and scalability",
+      "Designed the UI independently, creating a user-friendly and visually consistent interface from scratch",
+      "Developed an automated employee attendance system with geofence-based location tracking",
+      "Developed applications using Flutter and Dart, broadening cross-platform capabilities",
+      "Worked closely with team leads during review cycles, incorporating feedback to improve product quality",
     ],
   },
 ];
-
 const ExperienceSection = () => {
   const [active, setActive] = useState(0);
 
