@@ -1,5 +1,9 @@
 import { motion } from "framer-motion";
-import { ExternalLink, Github, Star, Smartphone } from "lucide-react";
+import { ExternalLink, Github, Star } from "lucide-react";
+import zofeurImage from "@/assets/zofeur_image.png";
+import ladybirdImage from "@/assets/ladybird.png";
+import kingswayImage from "@/assets/kingsway.png";
+import rapidImage from "@/assets/rapid.png";
 
 const featuredProjects = [
   {
