@@ -178,8 +178,14 @@ const ProjectsSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1, duration: 0.4 }}
-                className="p-6 rounded-xl bg-card border border-border hover:border-primary/30 hover:-translate-y-1 transition-all group"
+                className="rounded-xl bg-card border border-border hover:border-primary/30 hover:-translate-y-1 transition-all group overflow-hidden"
               >
+                {project.image && (
+                  <div className="w-full h-40 overflow-hidden">
+                    <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
+                  </div>
+                )}
+                <div className="p-6">
                 <div className="flex justify-between items-start mb-3">
                   <div>
                     <h4 className="font-semibold text-lg group-hover:text-primary transition-colors">
