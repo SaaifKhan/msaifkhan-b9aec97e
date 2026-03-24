@@ -15,8 +15,7 @@ const AboutSection = () => {
             <span className="h-px flex-1 bg-border max-w-xs" />
           </h2>
 
-          <div className="grid md:grid-cols-5 gap-12">
-            <div className="md:col-span-3 space-y-4 text-muted-foreground leading-relaxed">
+          <div className="max-w-3xl space-y-4 text-muted-foreground leading-relaxed">
               <p>
                 I'm a passionate Android developer who loves building clean, scalable 
                 mobile applications. My journey started at <span className="text-foreground">SZABIST</span> where 
@@ -35,15 +34,6 @@ const AboutSection = () => {
                 When I'm not coding, I write technical articles on Medium, contribute to 
                 open-source, and explore the latest in mobile development.
               </p>
-            </div>
-            <div className="md:col-span-2 flex justify-center">
-              <div className="relative group">
-                <div className="w-64 h-64 rounded-lg bg-secondary border border-border flex items-center justify-center overflow-hidden">
-                  <div className="font-mono text-6xl font-bold text-gradient-primary">SK</div>
-                </div>
-                <div className="absolute inset-0 rounded-lg border-2 border-primary/30 translate-x-4 translate-y-4 -z-10 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform" />
-              </div>
-            </div>
           </div>
         </motion.div>
       </div>
