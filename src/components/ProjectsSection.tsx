@@ -11,11 +11,7 @@ const featuredProjects = [
     subtitle: "Ride-Hailing Platform · UAE",
     description:
       "A high-performance ride-hailing platform serving 100K+ users across the UAE. Contributed to end-to-end development — from feature implementation to crash monitoring and performance optimization.",
-    impact: [
-      "Integrated Adyen & Checkout payment flows for seamless transactions",
-      "Built real-time Firebase notifications & live data updates across screens",
-      "Improved app stability to 99.72% crash-free through performance optimization",
-    ],
+    
     tech: ["Kotlin", "MVVM", "Firebase", "Adyen", "Checkout", "Google Maps"],
     link: "https://play.google.com/store/apps/details?id=production.zofeur.customer&hl=en",
     image: zofeurImage,
@@ -26,11 +22,7 @@ const featuredProjects = [
     subtitle: "Childcare Management Platform",
     description:
       "Perfect Day is the only true all-in-one childcare management software on the market. It provides real-time live HD video monitoring and a social media style daily activity feed so parents can see what their child is up to at any time throughout the day.",
-    impact: [
-      "Integrated Stripe payments & built the subscription module end-to-end",
-      "Fixed memory leaks & resolved production bugs for app stability",
-      "Delivered production-readiness improvements across the platform",
-    ],
+    
     tech: ["Kotlin", "Clean Architecture", "Firebase", "Stripe"],
     link: "https://play.google.com/store/apps/details?id=com.perfectday.parent",
     image: ladybirdImage,
@@ -45,6 +37,7 @@ const otherProjects = [
     description:
       "A restaurant supply chain app with complete order functionality, supplier management, and real-time chat built with custom Canvas UI and MVVM architecture.",
     tech: ["Kotlin", "MVVM", "Canvas", "Firebase"],
+    link: "https://play.google.com/store/apps/details?id=com.rapidorder&hl=en",
     image: rapidImage,
   },
   {
@@ -129,15 +122,6 @@ const ProjectsSection = () => {
                     <p className="text-muted-foreground leading-relaxed mb-6 text-sm md:text-base">
                       {project.description}
                     </p>
-
-                    <ul className="space-y-2.5 mb-8">
-                      {project.impact.map((item) => (
-                        <li key={item} className="flex items-start gap-2.5 text-sm">
-                          <span className="text-primary mt-1 flex-shrink-0">▹</span>
-                          <span className="text-muted-foreground">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
 
                     <div className="flex flex-wrap gap-2 mb-6">
                       {project.tech.map((t) => (

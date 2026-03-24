@@ -36,14 +36,6 @@ const AboutSection = () => {
                 open-source, and explore the latest in mobile development.
               </p>
             </div>
-            <div className="md:col-span-2 flex justify-center">
-              <div className="relative group">
-                <div className="w-64 h-64 rounded-lg bg-secondary border border-border flex items-center justify-center overflow-hidden">
-                  <div className="font-mono text-6xl font-bold text-gradient-primary">SK</div>
-                </div>
-                <div className="absolute inset-0 rounded-lg border-2 border-primary/30 translate-x-4 translate-y-4 -z-10 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform" />
-              </div>
-            </div>
           </div>
         </motion.div>
       </div>
