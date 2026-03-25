@@ -16,7 +16,7 @@ const awards = [
     issuer: "Appiskey",
     date: "Sep 2021",
     description:
-      "Awarded for delivering an outstanding technical presentation, along with a ₹5,000 cash prize.",
+      "Awarded for delivering an outstanding technical presentation, along with a PKR 5,000 cash prize.",
     image: null,
   },
 ];
