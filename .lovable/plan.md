@@ -1,25 +1,30 @@
 
 
-## Deploy Portfolio as GitHub Pages Root Site
+## Add Awards & Certifications Section
 
-To get a clean URL like `saaifkhan.github.io` (similar to `syedammarsohail.github.io`), you need a specific repository setup.
+### Overview
+Add a new "Awards & Certifications" section to the portfolio, showcasing two awards with clean card-based layout and the uploaded image for the Fast Learner Award.
 
-### The Problem
+### Changes
 
-Your current repo is named `work-wand-portfolio`, which gives you `saaifkhan.github.io/work-wand-portfolio/`. To get the root `saaifkhan.github.io` URL, the repository **must** be named exactly `SaaifKhan.github.io` (matching your GitHub username).
+1. **Copy uploaded image** to `src/assets/fast-learner-award.png`
 
-### What You Need to Do on GitHub
+2. **Create `src/components/AwardsSection.tsx`**
+   - Section header: "06. Awards & Certifications" (matching existing numbering style)
+   - Two award cards with framer-motion animations:
+     - **Fast Learner Award** — Issued by Next Generation Innovation, Feb 2025. Includes the uploaded photo. Description about curiosity and learning spirit.
+     - **Best Presentation Award** — Issued by Appiskey, Sep 2021. With ₹5,000 cash prize. No image, icon-based card.
+   - Cards use the existing glass/glow styling patterns from the project
 
-1. **Create a new repository** on GitHub named **`SaaifKhan.github.io`**
-2. In Lovable, disconnect the current GitHub connection and reconnect to this new repo
-3. Go to the new repo's **Settings → Pages → Source** and select **GitHub Actions**
+3. **Update `src/pages/Index.tsx`**
+   - Import and add `<AwardsSection />` between the Experience and Projects sections (logical flow: About → Skills → Experience → Awards → Projects → Articles → Contact)
 
-### Code Changes I'll Make
+4. **Update `src/components/Navbar.tsx`**
+   - Add "Awards" link to the `navLinks` array pointing to `#awards`
 
-1. **`vite.config.ts`** — Change `base` from `"/work-wand-portfolio/"` to `"/"` since the site will be served from the root domain
-2. **`.github/workflows/deploy.yml`** — Already configured correctly, no changes needed
-
-### Result
-
-Your portfolio will be live at: **https://saaifkhan.github.io/**
+### Layout
+- Responsive grid: 1 column on mobile, 2 columns on desktop
+- Award card with image gets the photo displayed prominently
+- Each card shows: award name, issuer, date, brief description
+- Uses existing design tokens (mono font headers, border-glow, glass effects)
 
