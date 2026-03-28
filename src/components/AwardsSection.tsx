@@ -32,7 +32,7 @@ const AwardsSection = () => {
           transition={{ duration: 0.5 }}
           className="text-2xl font-mono font-bold mb-12"
         >
-          <span className="text-primary">06.</span>{" "}
+          <span className="text-primary">05.</span>{" "}
           <span className="text-foreground">Awards & Certifications</span>
         </motion.h2>
 
