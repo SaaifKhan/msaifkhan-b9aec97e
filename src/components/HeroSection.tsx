@@ -1,5 +1,6 @@
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Github, Linkedin, FileText, ArrowDown } from "lucide-react";
+import { Github, Linkedin, FileText, ArrowDown, Download } from "lucide-react";
 import profileImg from "@/assets/saif-profile.png";
 
 const socials = [
@@ -8,7 +9,44 @@ const socials = [
   { icon: FileText, href: "https://medium.com/@saif-khan09", label: "Medium" },
 ];
 
+const phrases = ["mobile.", "Android.", "the future."];
+
+const stats = [
+  { value: "4+", label: "Years Experience" },
+  { value: "100K+", label: "Users Impacted" },
+  { value: "99.72%", label: "Crash-Free Rate" },
+  { value: "5+", label: "Apps Shipped" },
+];
+
 const HeroSection = () => {
+  const [phraseIndex, setPhraseIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const currentPhrase = phrases[phraseIndex];
+    const timeout = setTimeout(
+      () => {
+        if (!isDeleting) {
+          if (charIndex < currentPhrase.length) {
+            setCharIndex(charIndex + 1);
+          } else {
+            setTimeout(() => setIsDeleting(true), 1500);
+          }
+        } else {
+          if (charIndex > 0) {
+            setCharIndex(charIndex - 1);
+          } else {
+            setIsDeleting(false);
+            setPhraseIndex((phraseIndex + 1) % phrases.length);
+          }
+        }
+      },
+      isDeleting ? 50 : 100
+    );
+    return () => clearTimeout(timeout);
+  }, [charIndex, isDeleting, phraseIndex]);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Grid background */}
@@ -36,7 +74,11 @@ const HeroSection = () => {
               Saif Khan
             </h1>
             <h2 className="text-3xl md:text-5xl font-bold text-muted-foreground mb-6">
-              I build things for <span className="text-gradient-primary">mobile.</span>
+              I build things for{" "}
+              <span className="text-gradient-primary">
+                {phrases[phraseIndex].substring(0, charIndex)}
+              </span>
+              <span className="text-primary animate-pulse">|</span>
             </h2>
             <p className="text-muted-foreground max-w-xl text-lg leading-relaxed mb-10">
               Android Engineer with 4+ years of experience crafting high-quality mobile 
@@ -45,7 +87,7 @@ const HeroSection = () => {
               <a href="#" className="text-primary hover:underline">Next Generation Innovation</a>.
             </p>
 
-            <div className="flex items-center gap-6 mb-16">
+            <div className="flex items-center gap-4 mb-16 flex-wrap">
               {socials.map(({ icon: Icon, href, label }) => (
                 <a
                   key={label}
@@ -58,6 +100,14 @@ const HeroSection = () => {
                   <Icon size={20} />
                 </a>
               ))}
+              <a
+                href="/Saif_Resume.pdf"
+                target="_blank"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-primary text-primary font-mono text-sm hover:bg-primary/10 transition-colors glow-primary"
+              >
+                <Download size={18} />
+                Download Resume
+              </a>
             </div>
           </motion.div>
 
@@ -77,6 +127,21 @@ const HeroSection = () => {
             <div className="absolute -inset-1 rounded-2xl bg-primary/10 blur-xl -z-10" />
           </motion.div>
         </div>
+
+        {/* Stats Bar */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1, duration: 0.6 }}
+          className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6"
+        >
+          {stats.map((stat) => (
+            <div key={stat.label} className="text-center p-4 rounded-lg glass">
+              <p className="text-2xl md:text-3xl font-bold text-primary font-mono">{stat.value}</p>
+              <p className="text-xs md:text-sm text-muted-foreground font-mono mt-1">{stat.label}</p>
+            </div>
+          ))}
+        </motion.div>
 
         <motion.a
           href="#about"

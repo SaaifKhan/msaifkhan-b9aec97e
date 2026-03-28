@@ -30,7 +30,7 @@ const ArticlesSection = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="flex items-center gap-4 text-2xl font-bold font-mono mb-4">
-            <span className="text-primary">05.</span> Articles
+            <span className="text-primary">06.</span> Articles
             <span className="h-px flex-1 bg-border max-w-xs" />
           </h2>
           <p className="text-muted-foreground mb-12">
