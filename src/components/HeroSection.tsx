@@ -14,7 +14,6 @@ const phrases = ["mobile.", "Android.", "the future."];
 const stats = [
   { value: "4+", label: "Years Experience" },
   { value: "100K+", label: "Users Impacted" },
-  { value: "99.72%", label: "Crash-Free Rate" },
   { value: "5+", label: "Apps Shipped" },
 ];
 
