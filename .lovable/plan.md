@@ -1,30 +1,35 @@
 
 
-## Add Awards & Certifications Section
+## Portfolio Enhancement Plan
 
-### Overview
-Add a new "Awards & Certifications" section to the portfolio, showcasing two awards with clean card-based layout and the uploaded image for the Fast Learner Award.
+### Current State
+The portfolio is solid with good structure. Here are targeted enhancements to make it more recruiter-friendly and visually impactful.
 
-### Changes
+### Enhancements
 
-1. **Copy uploaded image** to `src/assets/fast-learner-award.png`
+**1. Add a Typing Animation to Hero Section**
+- Add a typewriter effect on the subtitle "I build things for mobile." cycling through phrases like "mobile.", "Android.", "the future." — creates an engaging first impression.
 
-2. **Create `src/components/AwardsSection.tsx`**
-   - Section header: "06. Awards & Certifications" (matching existing numbering style)
-   - Two award cards with framer-motion animations:
-     - **Fast Learner Award** — Issued by Next Generation Innovation, Feb 2025. Includes the uploaded photo. Description about curiosity and learning spirit.
-     - **Best Presentation Award** — Issued by Appiskey, Sep 2021. With ₹5,000 cash prize. No image, icon-based card.
-   - Cards use the existing glass/glow styling patterns from the project
+**2. Add a "Download Resume" CTA Button in Hero**
+- Add a prominent green-bordered button next to social icons saying "Download Resume" — recruiters always look for this first. Currently it's only in the navbar.
 
-3. **Update `src/pages/Index.tsx`**
-   - Import and add `<AwardsSection />` between the Experience and Projects sections (logical flow: About → Skills → Experience → Awards → Projects → Articles → Contact)
+**3. Add Stats/Metrics Bar Below Hero**
+- A horizontal strip showing key numbers: "4+ Years Experience", "100K+ Users Impacted", "99.72% Crash-Free", "5+ Apps Shipped" — recruiters love quantifiable achievements at a glance.
 
-4. **Update `src/components/Navbar.tsx`**
-   - Add "Awards" link to the `navLinks` array pointing to `#awards`
+**4. Fix Section Numbering**
+- Currently Awards says "06." and Contact says "06." too. Fix numbering to be consistent across all sections (01-08).
 
-### Layout
-- Responsive grid: 1 column on mobile, 2 columns on desktop
-- Award card with image gets the photo displayed prominently
-- Each card shows: award name, issuer, date, brief description
-- Uses existing design tokens (mono font headers, border-glow, glass effects)
+**5. Enhance Contact Section**
+- Add links to LinkedIn and GitHub alongside the email button so recruiters have multiple ways to reach out. Add a subtle tagline like "Let's build something great together."
+
+**6. Add Smooth Scroll Behavior**
+- Add `scroll-behavior: smooth` to the HTML for polished navigation transitions when clicking navbar links.
+
+**7. Add Hover Animations on Skill Pills**
+- Subtle scale-up and glow on hover for skill tags — adds interactivity and polish.
+
+### Technical Details
+- **Files modified**: `HeroSection.tsx`, `ContactSection.tsx`, `SkillsSection.tsx`, `index.css`, `AwardsSection.tsx`, `ArticlesSection.tsx`
+- **No new dependencies** — typewriter effect built with `useState` + `useEffect`
+- All changes follow existing design patterns (mono font, primary color accents, framer-motion animations)
 
