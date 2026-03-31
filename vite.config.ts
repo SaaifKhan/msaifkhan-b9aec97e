@@ -5,12 +5,6 @@ import path from "path";
 export default defineConfig({
   base: "/msaifkhan-b9aec97e/",
   plugins: [react()],
-  test: {
-    environment: "jsdom",
-    globals: true,
-    setupFiles: ["./src/test/setup.ts"],
-    include: ["src/**/*.{test,spec}.{ts,tsx}"],
-  },
   resolve: {
     alias: { "@": path.resolve(__dirname, "./src") },
   },
